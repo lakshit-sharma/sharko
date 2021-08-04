@@ -1,3 +1,54 @@
+/* form CSS Start */
+.contact_form{
+    display: block;
+    position: relative;
+}
+
+.connect{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.form_span{
+    color: #FF8101;
+    
+}
+
+.submit_btn{
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #FF8101;
+    border-radius: .3em;
+    cursor: pointer;
+    border: none;
+}
+.submit_btn:hover{
+    color: #FF8101;
+    background-color: #ffffff;
+    border: 2px solid #FF8101;
+
+}
+
+input, textarea{
+    width: 100%;
+    margin-left: .2em;
+    margin-right: .2em;
+    border-radius: .3em;
+
+}
+
+.address{
+    margin: 2em;
+
+}
+
+.map{
+    width: 100;
+}
+
+
+/* form CSS End */
+
 /* footer CSS START */
 .fa {
     padding: 0.4em;
@@ -31,3 +82,8 @@
     background: #125688;
     color: white;
 }
+
+/* .footer_logo{
+    height: 1em;
+    width: 5em;
+} */

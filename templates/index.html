@@ -2,7 +2,7 @@
 
 {% block content %}
     <!-- Carousel Start -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -55,6 +55,86 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-    </div>  
+    </section>
+    <!-- Carousel END -->
+
+    <section class="contact">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group row">
+              <label for="name" class="col-3 col-form-label"></label> 
+              <div class="col-9">
+                <input id="name" name="name" placeholder="Enter Name" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="email" class="col-3 col-form-label"></label> 
+              <div class="col-9">
+                <input id="email" name="email" placeholder="Enter Email" type="email" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="desc" class="col-3 col-form-label"></label> 
+              <div class="col-9">
+                <textarea id="desc" name="desc" cols="40" rows="5" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="phone" class="col-3 col-form-label"></label> 
+              <div class="col-9">
+                <input id="phone" name="phone" placeholder="Enter Mobile Number" type="tel" class="form-control">
+              </div>
+            </div>
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} m-2" id="messages" role="alert">
+            {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            <div class="form-group row">
+              <div class="offset-3 col-9">
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        <!-- <div class="form">
+            <form class="contact_form" method="POST" action="/">
+                {% csrf_token %}
+                <p class="connect">CONNECT <span class="form_span">US</span></p>
+                <input type="text" name="name" placeholder="Enter Name" required><br><br>
+                <input type="email" name="email" placeholder="Enter Email" required><br><br>
+                <input type="tel" name="phone" placeholder="Enter Mobile Number" required><br><br>
+                <textarea name="desc" rows="5" cols="50" placeholder="ask  anything" required></textarea><br><br>
+                 Jinja Code for messages fetching through backend 
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} m-2" id="messages" role="alert">
+                  {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                 Jinja Code End 
+                {% csrf_token %}
+                <div class="text-center">
+                    
+                    <button class="submit_btn" type="submit">
+                        SUBMIT
+                    </button>
+                </div>
+            </form> -->
+        </div>
+        <div class="address">
+            <p class="address_1">
+                Sector 2, Noida Uttar Preadesh<br>
+                info@sharko.com <br>
+                (+91) 1234567890 <br>
+            </p> 
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224369.03562555535!2d77.25804393611266!3d28.516681710458144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1627991807128!5m2!1sen!2sin" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    
+    
 {% endblock %}
-    <!-- Carousel  End -->
