@@ -59,7 +59,7 @@
     <!-- Carousel END -->
 
     <section class="contact">
-        <form method="POST">
+        <!-- <form method="POST">
             {% csrf_token %}
             <div class="form-group row">
               <label for="name" class="col-3 col-form-label"></label> 
@@ -86,27 +86,28 @@
               </div>
             </div>
             {% if messages %}
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} m-2" id="messages" role="alert">
-            {{ message }}
-            </div>
-            {% endfor %}
+              {% for message in messages %}
+                <div class="alert {{ message.tags }} m-2" id="messages" role="alert">
+                  {{ message }}
+                </div>
+              {% endfor %}
             {% endif %}
             <div class="form-group row">
               <div class="offset-3 col-9">
                 <button name="submit" type="submit" class="btn btn-primary">Submit</button>
               </div>
             </div>
-          </form>
-        <!-- <div class="form">
+          </form> -->
+         <div class="form">
             <form class="contact_form" method="POST" action="/">
                 {% csrf_token %}
                 <p class="connect">CONNECT <span class="form_span">US</span></p>
                 <input type="text" name="name" placeholder="Enter Name" required><br><br>
                 <input type="email" name="email" placeholder="Enter Email" required><br><br>
                 <input type="tel" name="phone" placeholder="Enter Mobile Number" required><br><br>
+                {% csrf_token %}
                 <textarea name="desc" rows="5" cols="50" placeholder="ask  anything" required></textarea><br><br>
-                 Jinja Code for messages fetching through backend 
+                 <!-- Jinja Code for messages fetching through backend  -->
                 {% if messages %}
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} m-2" id="messages" role="alert">
@@ -114,7 +115,7 @@
                 </div>
                 {% endfor %}
                 {% endif %}
-                 Jinja Code End 
+                 <!-- Jinja Code End  -->
                 {% csrf_token %}
                 <div class="text-center">
                     
@@ -122,7 +123,7 @@
                         SUBMIT
                     </button>
                 </div>
-            </form> -->
+            </form>
         </div>
         <div class="address">
             <p class="address_1">
@@ -132,7 +133,7 @@
             </p> 
         </div>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224369.03562555535!2d77.25804393611266!3d28.516681710458144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1627991807128!5m2!1sen!2sin" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224369.03562555535!2d77.25804393611266!3d28.516681710458144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1627991807128!5m2!1sen!2sin" width="100%" style="border:1px solid gray;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
     
