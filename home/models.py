@@ -12,3 +12,11 @@ class Enquiry(models.Model):
 
     def __str__(self):
         return self.name
+
+class Package(models.Model):
+    city_name=models.CharField(max_length=50)
+    price=models.IntegerField()
+    image=models.ImageField(upload_to='home/images')
+
+    def __str__(self):
+        return self.city_name
