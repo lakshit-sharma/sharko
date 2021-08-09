@@ -19,3 +19,9 @@ def index(request):
 
 def package(request):
     return render(request, 'package.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def signup(request):
+    return render(request, 'signup.html')
