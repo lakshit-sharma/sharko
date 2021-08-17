@@ -14,6 +14,7 @@ class Enquiry(models.Model):
         return self.name
 
 class Package(models.Model):
+    city_id=models.AutoField
     city_name=models.CharField(max_length=50)
     price=models.IntegerField()
     image=models.ImageField(upload_to='home/images')
