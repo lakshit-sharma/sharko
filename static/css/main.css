@@ -2,7 +2,7 @@ body {
     color: #000;
     overflow-x: hidden;
     height: 100%;
-    background-color: #B0BEC5;
+    background-color: #ffffff;
     background-repeat: no-repeat
 }
 
@@ -294,4 +294,28 @@ a {
 .btn-twitter {
     background-color: #42AEEC;
     color: #fff;
+}
+
+/* SLIDESHOW CSS START */
+
+.col-md-3{
+    display: inline-block;
+    margin-left: -4px;
+}
+.col-md-3 img{
+    width: 100%;
+    height: auto;
+}
+
+body .carousel-indicator li{
+    background-color: #304FFE;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+    background-color: #304FFE;
+}
+body .no-padding{
+    padding-left: 0;
+    padding-right: 0;
 }
